@@ -108,7 +108,12 @@ function openDiaryForDate(day, element) {
 function saveRoutine() {
     if (selectedDate) {
         localStorage.setItem(selectedDate, routineInput.value);
-        alert("Routine saved successfully! ✨🦋💖");
+        function saveRoutine() {
+  if (selectedDate) {
+    localStorage.setItem(selectedDate, routineInput.value);
+    // Notification code completely removed so nothing pops up!
+  }
+}
     }
 }
 
