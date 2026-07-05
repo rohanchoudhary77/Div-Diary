@@ -1,16 +1,17 @@
 {
   "name": "Divya's Diary",
   "short_name": "Diary",
-  "start_url": ".",
+  "description": "A magical personal diary for Divya",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "divya.jpeg",
+      "src": "./divya.jpeg",
       "sizes": "512x512",
       "type": "image/jpeg",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
