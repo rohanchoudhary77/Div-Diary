@@ -104,17 +104,22 @@ function openDiaryForDate(day, element) {
     routineInput.value = savedData ? savedData : "";
 }
 
-// Save Content to Local Storage
 function saveRoutine() {
-    if (selectedDate) {
-        localStorage.setItem(selectedDate, routineInput.value);
-        function saveRoutine() {
   if (selectedDate) {
     localStorage.setItem(selectedDate, routineInput.value);
-    // Notification code completely removed so nothing pops up!
+    
+    // Get our beautiful custom pink notification
+    const toast = document.getElementById("customToast");
+
+    // Show the pink notification
+    toast.style.display = "block";
+
+    // Automatically hide it after exactly 1 second (1000ms)
+    setTimeout(() => {
+      toast.style.display = "none";
+    }, 1000);
   }
 }
-    }
 }
 
 // Floating Hearts Generator Logic
