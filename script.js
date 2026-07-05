@@ -114,12 +114,11 @@ function saveRoutine() {
     // Show the pink notification
     toast.style.display = "block";
 
-    // Automatically hide it after exactly 1 second (1000ms)
+    // Automatically hide it after 3 seconds
     setTimeout(() => {
       toast.style.display = "none";
-    }, 1000);
+    }, 3000);
   }
-}
 }
 
 // Floating Hearts Generator Logic
