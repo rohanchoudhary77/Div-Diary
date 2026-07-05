@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Sacramento&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe5ec, #ffc2d1);
+    color: #4a4e69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Lock Screen Styling */
+.lock-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4a4e69, #22223b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    transition: opacity 0.5s ease;
+}
+
+.lock-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    width: 90%;
+}
+
+.lock-card h2 {
+    color: #ff477e;
+    margin-bottom: 10px;
+}
+
+#passwordInput {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ffccd5;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#passwordInput:focus {
+    outline: none;
+    border-color: #ff477e;
+}
+
+.error-msg {
+    color: #ff0a54;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Welcome Screen Styling */
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffc2d1, #ff8fab);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+}
+
+.welcome-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+.welcome-card h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5rem;
+    color: #ff477e;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff8fab;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Main App Layout */
+.app-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255, 71, 126, 0.15);
+    max-width: 500px;
+    width: 90%;
+    margin: 20px;
+    z-index: 2;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ff477e, #ff8fab, #7209b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.calendar-day {
+    padding: 12px 5px;
+    background: #fff0f3;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ff477e;
+    transition: 0.3s;
+    border: 1px solid #ffccd5;
+}
+
+.calendar-day:hover {
+    background: #ffccd5;
+    transform: scale(1.05);
+}
+
+.calendar-day.active {
+    background: linear-gradient(45deg, #ff477e, #ff8fab);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 71, 126, 0.3);
+}
+
+.cutie-wish {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.8rem;
+    color: #ff477e;
+    text-align: center;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.quote-box {
+    background: linear-gradient(135deg, #fff0f3, #ffe5ec);
+    border-left: 4px solid #ff477e;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #4a4e69;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(255, 71, 126, 0.05);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #ffccd5;
+    border-radius: 12px;
+    resize: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #4a4e69;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #ff477e;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-unlock { background: linear-gradient(45deg, #ff477e, #7209b7); }
+.btn-start { background: linear-gradient(45deg, #ff477e, #ff8fab); }
+.btn-save { background: linear-gradient(45deg, #7209b7, #ff477e); }
+button:hover { transform: translateY(-2px); opacity: 0.9; }
+
+/* Floating Hearts Animation */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    bottom: -20px;
+    color: #ff477e;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: fly linear infinite;
+}
+
+@keyframes fly {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(-105vh) translateX(50px) rotate(360deg); opacity: 0; }
+}

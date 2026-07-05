@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya's Magical Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Hearts Container -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- 1. Password Lock Screen -->
+    <div class="lock-screen" id="lockScreen">
+        <div class="lock-card">
+            <h2>🔒 Diary is Locked</h2>
+            <p>Enter the password to unlock Divya's world</p>
+            <input type="password" id="passwordInput" placeholder="Enter Password Here...">
+            <button onclick="checkPassword()" class="btn-unlock">Unlock Diary 🔑</button>
+            <p id="errorMessage" class="error-msg" style="display: none;">❌ Incorrect Password 🙄! Please try again.</p>
+        </div>
+    </div>
+
+    <!-- 2. Welcome Screen (Hidden by default) -->
+    <div class="welcome-screen" id="welcomeScreen" style="display: none;">
+        <div class="welcome-card">
+            <h1>Welcome to Divya's world... 🦋❤️✨</h1>
+            <img src="divya.jpeg" alt="Divya's Picture" class="profile-pic" onerror="this.src='myphoto.png'">
+            <p>Ready to write today's magical moments?</p>
+            <button onclick="startApp()" class="btn-start">Open My Diary 💖</button>
+        </div>
+    </div>
+
+    <!-- 3. Main Diary App Screen (Hidden by default) -->
+    <div class="app-container" id="mainApp" style="display: none;">
+        <h1 class="gradient-text">🌸 Divya's Daily Diary 🌸</h1>
+        
+        <div class="calendar-section">
+            <h2 id="monthYearTitle">July 2026</h2>
+            <div class="calendar-grid" id="calendarGrid"></div>
+        </div>
+
+        <div class="diary-section" id="diarySection" style="display: none;">
+            <p class="cutie-wish">✨💕 Have a good day cutie 💕✨</p>
+            <div class="quote-box" id="dailyQuoteBox">"Loading your magical quote for today..."</div>
+            <h3 id="selectedDateText">Select a date</h3>
+            <textarea id="routineInput" placeholder="How was your day? Write your daily routine details here..."></textarea>
+            <button onclick="saveRoutine()" class="btn-save">Save Diary 🧜‍♀️💕</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
